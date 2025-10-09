@@ -4,71 +4,315 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .header-div {
     height: 38px;
     width: 100%;
     display: flex;
 }
+
 .thick-line {
-    border:1px solid black;
+    border: 1px solid black;
     height: 1px;
     background-color: black;
-   
 }
 
+/* Common nav styles */
 .header-left-nav,
 .header-right-nav {
     display: flex;
     align-items: center;
     height: 100%;
     width: 50%;
-   
-    margin-right: 100px;
-    margin-left: 100px;
- 
-}
-.header-right-nav
-{
-  
+
+    margin: 0 100px;
 }
 
+/* Common list styles */
 .header-left-list,
 .header-right-list {
     list-style: none;
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
+    gap: 10px;
     width: 100%;
 }
-.header-right-list
-{
+
+/* Left = start, Right = end */
+.header-left-list {
+    justify-content: flex-start;
+}
+
+.header-right-list {
     justify-content: flex-end;
 }
 
-.header-right-list li
-{
-    position: relative;
-}
-
+/* Common link styles */
 .header-left-list a,
 .header-right-list a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     position: relative;
-    padding-right: 12px;
+    padding: 0 12px;
 }
+
+/* Common li styles */
+.header-left-list li,
+.header-right-list li {
+    position: relative;
+}
+
+/* Border animation lines (shared structure) */
+.header-left-list li::before,
+.header-left-list li::after,
+.header-right-list li::before,
 .header-right-list li::after {
     content: "";
     position: absolute;
-    right: 0;
-    bottom: 0;
     width: 2px;
     height: 0;
-    background-color: black;
+    background-color: #f00;
     transition: height 0.4s ease;
 }
 
+.header-left-list li::before,
+.header-right-list li::before {
+    top: 0;
+    left: 0;
+}
+
+.header-left-list li::after,
+.header-right-list li::after {
+    bottom: 0;
+    right: 0;
+}
+
+.header-left-list li:hover::before,
+.header-left-list li:hover::after,
+.header-right-list li:hover::before,
 .header-right-list li:hover::after {
     height: 100%;
+}
+
+.header-div i:hover {
+    transform: rotatey(180deg);
+    color: #f00;
+}
+
+.container-category {
+    width: 100%;
+
+}
+
+.parent-category {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    height: 80px;
+}
+
+.child1-category {
+    background-image: url(../Images/g2-logo-clear.avif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: 100px;
+
+}
+
+.child1-category h3 {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    color: #111;
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: 70px;
+
+
+}
+
+.child2-category {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+.child2-category {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.child2-category > a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    position: relative;
+    padding: 14px 14px;
+    transition: color 0.3s ease;
+}
+
+.child2-category > a::before,
+.child2-category > a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 2px solid black;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.child2-category > a::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.child2-category> a::after {
+    bottom: 0;
+    left: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.child2-category > a:hover::before,
+.child2-category a:hover::after {
+    width: 96%;
+    height: 95%;
+    opacity: 1;
+}
+
+.child2-category > a:hover {
+    color: #d40000;
+}
+
+.child2-category > a i.angle {
+    margin-left: 10px;
+    /* adjust space size */
+}
+
+.child3-category {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+.child3-category i:hover {
+    color: #d40000;
+}
+.mycart:hover~.shopingtwo {
+    transform: translatey( -10px);
+    transition: transform 0.3s ease;
+}
+.child3-category  >a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+
+    position: relative;
+    padding: 14px 10px;
+    transition: color 0.3s ease;
+}
+
+.shopingtwo {
+    border-radius: 50%;
+    padding: 0 8px;
+    background-color: #d40000;
+    position: absolute;
+    margin-top: -38px;
+    margin-right: 8px;
+    z-index: 3;
+}
+
+.shopingtwo p {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.pagesdiv {
+    width: 340px;
+    height: 230px;
+    box-shadow: 1px 1px 2px #00000070, -1px -1px 2px #00000070;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    margin-left: 400px;
+    opacity: 0;
+    margin-top: 290px;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    transform: scale(0, 0);
+    transition: 1s;
+}
+
+.pagebutton:hover+.pagesdiv,
+.pagesdiv:hover {
+    visibility: visible;
+    transform: scale(1, 1);
+    opacity: 1;
+}
+.pagesdiv li {
+    list-style: none;
+    padding: 8px 14px;
+    font-size: 22px;
+}
+.pagesdiv li span {
+    display: inline-block;
+   color: #111;
+}
+.pagesdiv li a:hover span {
+    transform: scale(1.1,1.1);
+    color: #d40000;
+  
+}
+.hidden-title {
+    padding-bottom: 4px;
+    display: inline;
+    border-bottom: 1px dotted #16161a;
+}
+.pagesdiv li .hidden-title {
+    color: gray;
+}
+.sales-container
+{
+    width:100%;
+    margin:auto;
+}
+.sales-div {
+    height: 40px;
+    background-color: #111;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering if needed */
+}
+
+.sales-div {
+    color: white;
+    word-spacing: 2px;
+  font-size: 18px;
+}
+
+.sales-div h3 a {
+    color: yellow;
+border-bottom: 2px solid yellow;
+    padding-bottom: 1px;
+   
+}
+
+.sales-div h3 a:hover {
+    cursor: pointer;
+    letter-spacing: 2px;
 }
