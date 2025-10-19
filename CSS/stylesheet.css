@@ -400,22 +400,26 @@ border-bottom: 2px solid yellow;
    
     width:100%;
     height:700px;
+    margin: auto;
+    text-align: center;
   
 }
 .collections-parent
 {
+    width:86%;
+margin: 0 auto;
     padding-top:40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between
 }
  .collections-child {
     width: 500px;
-    height: 500px;
+    height: 580px;
     overflow: hidden;
     border-radius: 12px;
-    background: linear-gradient(145deg, #fdf6e3, #fbe8a6);
-    background: linear-gradient(145deg, #2B2B2B, #121212);
+     background: linear-gradient(145deg, #fdf6e3, #fbe8a6);
+    background: linear-gradient(145deg, #2B2B2B, #0c060643); 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
    
     position: relative;
@@ -437,17 +441,17 @@ border-bottom: 2px solid yellow;
         left: 0;
         z-index: 10;
         transition: transform 1s ease;
-        transform: translateY(35px);
+        transform: translateY(65px);
 
   }
  .collection-names a
 {
-color: #E30613;
-border-bottom: 3px solid #E30613;
+color: white;
+border-bottom: 3px solid white;
 text-decoration:none ;
 font-size: 28px;
 font-weight: bold;
-padding-bottom: 3px;
+
   }
 .collection-names a:hover
 {
@@ -459,11 +463,172 @@ padding-bottom: 3px;
 color: #D3AF37;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     font-size: 42px;
-    padding: 30px;
+     padding-bottom: 60px;
+  
  }
   .collections-child:hover .collection-names {
       transform: translateY(-20px);
+    
   }
   .collections-child:hover img {
       transform: scale(1.05);
   }
+  .trending-section
+  {
+  
+
+  }
+.trending-headers {
+    width:86%;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.trending-headers h3
+{
+font-size: 45px;
+word-spacing: 2px;
+letter-spacing: 1px;
+
+}
+.trending-small-headers a {
+
+margin-left: 40px;
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+}
+.trending-small-headers a.link-select {
+    color: red;
+    padding-bottom: 27px;
+    border-bottom: 5px solid #f00;
+}
+.myhr
+{
+    width:86%;
+    margin:0 auto;
+}
+.prices-section {
+    width: 100%;
+}
+
+.prices-parent {
+    width: 86%;
+    margin: 70px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prices-child {
+    position: relative;
+    width: 22%;
+    height: 640px;
+   
+    border-radius: 10px;
+   
+}
+
+.prices-child img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+           
+}
+
+.icon-actions {
+    position: absolute;
+    z-index: 100;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.icon-actions a {
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 12px 16px;
+    margin-right: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+.prices-child:hover .icon-actions {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+}
+.icon-actions a:hover {
+    color: red;
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.prices-child:hover .price-info a
+{
+color: red;
+}
+.price-info {
+    text-align: center;
+    color: black;
+    margin-top: 30px;
+}
+
+.price-info a {
+    font-size: 28px;
+    
+    cursor: pointer;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #D3AF37;
+    font-weight: bold;
+}
+.prices-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease;
+    backface-visibility: hidden;
+}
+
+.img3::after
+{
+background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
+}
+.img2::after {
+    background-image: url(../Images/G2_Hans_Sama_MSI_2024.jpg);
+}
+.img1::after {
+    background-image: url(../Images/G2_Caps_MSI_2025.jpg);
+}
+.img4::after {
+    background-image: url(../Images/Untitled.jpeg);
+}
+.prices-child:hover::after {
+    transform: rotateY(0deg);
+}
