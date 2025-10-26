@@ -660,7 +660,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
   font-size: 36px;
   font-family: 'Bebas Neue', 'Oswald', sans-serif;
   padding: 20px;
-  color: #D4AF37; /* G2 gold */
+  color: #D4AF37; 
   letter-spacing: 1px;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(212, 175, 55, 0.3);
@@ -695,8 +695,8 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid #D4AF37; /* gold outline */
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); /* gold glow */
+  border: 3px solid #D4AF37; 
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); 
 }
 
 .review-text {
@@ -716,24 +716,23 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
 
 .review-text .title {
   font-size: 18px;
-  color: #D4AF37; /* gold accent */
+  color: #D4AF37; 
   font-family: 'Rajdhani', 'Poppins', sans-serif;
   text-shadow: 0.5px 0.5px 1px rgba(212, 175, 55, 0.2);
 }
-/* === FONT IMPORT === */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
 
-/* === SECTION LAYOUT === */
+
 .youmaylike-section {
     width: 100%;
     padding: 80px 0;
     background: #f7f3ec;
-    /* soft light beige */
     font-family: "Open Sans", sans-serif;
     color: #111;
 }
 
-/* === PARENT LAYOUT === */
+
 .youmaylike-parent {
     width: 86%;
     margin: 0 auto;
@@ -742,7 +741,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     gap: 40px;
 }
 
-/* === CARD CONTAINER === */
+
 .youmaylike-child {
     position: relative;
     width: 22%;
@@ -757,7 +756,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* === IMAGE AREA === */
+
 .image-wrapper {
     position: relative;
     height: 640px;
@@ -773,7 +772,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     border-radius: 10px;
 }
 
-/* Hover overlay */
+
 .image-wrapper::after {
     content: "";
     position: absolute;
@@ -792,7 +791,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     top: 0;
 }
 
-/* === OVERLAY IMAGES === */
+
 .img1 .image-wrapper::after {
     background-image: url(../Images/Close_Up_-_02.webp);
 }
@@ -809,7 +808,6 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     background-image: url(../Images/IMG_0864.webp);
 }
 
-/* === ICONS === */
 .icon-actions {
     position: absolute;
     z-index: 5;
@@ -835,7 +833,6 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     border-radius: 50%;
     text-decoration: none;
     border: 1px solid #c8a951;
-    /* gold border */
     transition: all 0.3s ease;
 }
 
@@ -845,7 +842,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-/* === TEXT + PRICE === */
+
 .youmaylike-info {
     text-align: center;
     margin: 25px 0 20px;
@@ -863,7 +860,7 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
 
 .youmaylike-child:hover .youmaylike-info a {
     color: #c8a951;
-    /* gold hover */
+
 }
 
 .youmaylike-price {
@@ -881,4 +878,136 @@ background-image: url(../Images/GjlZLTjWMAAS4h6.jpeg);
 .new-price {
     color: #c8a951;
     font-weight: 700;
+}
+.latestnews-section {
+    width: 100%;
+    min-height: 900px;
+    text-align: center;
+    padding: 80px 0;
+    background: #f7f3ec;
+    font-family: 'Poppins', sans-serif;
+}
+
+.latestnews-parent {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.latestnewsh2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #444;
+ 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.latestnewsh2.clicked {
+    color: #c4a000;
+}
+
+.latestnewscard1 {
+    width: 530px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.latestnewsimage {
+    height: 700px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.4s ease;
+    border: 1px solid #e0e0e0;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4); 
+    background-color: #fff;
+}
+
+.latestnewsimage:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.latestnewscontent {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.latestnews-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.latestnews-subtitle {
+    font-size: 28px;
+    font-weight: 500;
+    color: #6c757d;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.latestnews-subtitle:hover {
+    color: #222;
+}
+
+.latestnews-description {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.latestnews-readmore {
+    font-size: 24px;
+    color: #c4a000;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.latestnews-readmore:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    color: #888;
+}
+
+.latestnews-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(100, 100, 100, 0.4), transparent);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.latestimg1 {
+    background-image: url(../Images/Screenshot\ 2025-10-26\ at\ 10-42-34\ Instagram.png);
+}
+
+.latestimg2 {
+    background-image: url(../Images/ce3917b84b954dc0ffc9a35954d58871.jpg);
+}
+
+.latestimg3 {
+    background-image: url(../Images/e7f931878a7f070b133873fe1c169672.jpg);
 }
